@@ -1,0 +1,12 @@
+@model NooshApp.Models.SpiceLevel
+
+@if (Model != NooshApp.Models.SpiceLevel.None)
+{
+    <span class="spice-indicator" title="@Model">
+        @for (int i = 1; i <= 4; i++)
+        {
+            var isFilled = i <= (int)Model;
+            <i class="fa-solid fa-pepper-hot spice-pepper @(isFilled ? "filled level-" + (int)Model : "")"></i>
+        }
+    </span>
+}

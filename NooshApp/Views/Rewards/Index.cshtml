@@ -1,0 +1,94 @@
+@model NooshApp.ViewModels.RewardsDashboardViewModel
+@{
+    ViewData["Title"] = "My Rewards";
+}
+
+<section class="rewards-hero">
+    <div class="container">
+        <p class="section-eyebrow">Noosh Rewards</p>
+        <h1 class="menu-hero-title">Your Points</h1>
+    </div>
+</section>
+
+<section class="rewards-dashboard py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Points + Progress -->
+            <div class="col-lg-7">
+                <div class="rewards-points-card">
+                    <p class="rewards-points-label">Current Balance</p>
+                    <h2 class="rewards-points-value">@Model.TotalPoints <span>pts</span></h2>
+
+                    @if (Model.NextMilestone != null)
+                    {
+                        <div class="rewards-progress-wrap">
+                            <div class="rewards-progress-labels">
+                                <span>Next Reward: @Model.NextMilestone.RewardName</span>
+                                <span>@Model.NextMilestone.PointsRequired pts</span>
+                            </div>
+                            <div class="progress rewards-progress-bar">
+                                <div class="progress-bar" role="progressbar" style="width: @Model.ProgressPercent%;"></div>
+                            </div>
+                        </div>
+                    }
+                    else if (Model.Milestones.Any())
+                    {
+                        <p class="rewards-all-unlocked">
+                            <i class="fa-solid fa-crown me-2"></i>You've unlocked every reward tier!
+                        </p>
+                    }
+
+                    <form asp-controller="Rewards" asp-action="AddDemoPoints" method="post" class="mt-4">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-hero-secondary">
+                            <i class="fa-solid fa-plus me-2"></i>Add 50 Demo Points
+                        </button>
+                        <p class="rewards-demo-note">For testing — real points are added after in-store purchases.</p>
+                    </form>
+                </div>
+
+                <div class="rewards-milestones mt-4">
+                    <h4 class="builder-section-title">Reward Milestones</h4>
+                    <div class="milestone-list">
+                        @foreach (var milestone in Model.Milestones)
+                        {
+                            var isUnlocked = Model.TotalPoints >= milestone.PointsRequired;
+                            <div class="milestone-item @(isUnlocked ? "unlocked" : "")">
+                                <i class="fa-solid @(isUnlocked ? "fa-circle-check" : "fa-lock")"></i>
+                                <span class="milestone-name">@milestone.RewardName</span>
+                                <span class="milestone-points">@milestone.PointsRequired pts</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reward History -->
+            <div class="col-lg-5">
+                <div class="rewards-history-card">
+                    <h4 class="builder-section-title">Reward History</h4>
+
+                    @if (!Model.History.Any())
+                    {
+                        <p class="rewards-empty">No activity yet — your earned points will show up here.</p>
+                    }
+                    else
+                    {
+                        <ul class="history-list">
+                            @foreach (var entry in Model.History)
+                            {
+                                <li class="history-item">
+                                    <div>
+                                        <p class="history-description">@entry.Description</p>
+                                        <p class="history-date">@entry.EarnedAt.ToLocalTime().ToString("dd MMM yyyy, HH:mm")</p>
+                                    </div>
+                                    <span class="history-points">+@entry.PointsEarned</span>
+                                </li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

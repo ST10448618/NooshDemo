@@ -1,0 +1,32 @@
+@model NooshApp.ViewModels.PhoneLoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="auth-section">
+    <div class="container">
+        <div class="auth-card">
+            <p class="section-eyebrow text-center">Noosh Rewards</p>
+            <h1 class="auth-title">Log In With Your Phone</h1>
+            <p class="auth-subtitle">We'll send a one-time code to verify it's you.</p>
+
+            <form asp-controller="Account" asp-action="Login" method="post" class="auth-form">
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label asp-for="PhoneNumber" class="form-label"></label>
+                    <input asp-for="PhoneNumber" class="form-control auth-input" placeholder="e.g. 0821234567" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-hero-primary w-100">
+                    <i class="fa-solid fa-paper-plane me-2"></i>Send Verification Code
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

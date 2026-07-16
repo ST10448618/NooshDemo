@@ -1,0 +1,1270 @@
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+:root {
+    --color-primary: #FFC72C;
+    --color-primary-dark: #E6B01F;
+    --color-ink: #111111;
+    --color-white: #FFFFFF;
+    --color-gray-light: #F5F5F5;
+    --color-gray-mid: #6B6B6B;
+
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.noosh-navbar {
+    background-color: var(--color-primary);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--color-ink);
+}
+
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: var(--color-ink) !important;
+    letter-spacing: -0.5px;
+}
+
+.brand-dot {
+    color: var(--color-ink);
+}
+
+.noosh-navbar .nav-link {
+    font-weight: 600;
+    color: var(--color-ink) !important;
+    margin: 0 0.75rem;
+    transition: opacity 0.2s ease;
+}
+
+.noosh-navbar .nav-link:hover {
+    opacity: 0.6;
+}
+
+.btn-order {
+    background-color: var(--color-ink);
+    color: var(--color-primary) !important;
+    font-weight: 700;
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--color-ink);
+    transition: transform 0.15s ease;
+}
+
+.btn-order:hover {
+    transform: translateY(-2px);
+    color: var(--color-primary) !important;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+    background-color: var(--color-primary);
+    padding: 5rem 0 4rem;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    color: var(--color-ink);
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-ink);
+    margin-bottom: 2rem;
+}
+
+.hero-actions .btn {
+    font-weight: 700;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--color-ink);
+    margin-right: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.btn-hero-primary {
+    background-color: var(--color-ink);
+    color: var(--color-primary);
+}
+
+.btn-hero-primary:hover {
+    background-color: var(--color-white);
+    color: var(--color-ink);
+}
+
+.btn-hero-secondary {
+    background-color: transparent;
+    color: var(--color-ink);
+}
+
+.btn-hero-secondary:hover {
+    background-color: var(--color-ink);
+    color: var(--color-primary);
+}
+
+.hero-image-wrap {
+    position: relative;
+    min-height: 320px;
+}
+
+.hero-image-wrap img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.noosh-footer {
+    background-color: var(--color-ink);
+    color: var(--color-white);
+    padding: 3.5rem 0 1.5rem;
+}
+
+.footer-brand {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.footer-tagline {
+    color: #ccc;
+}
+
+.noosh-footer h6 {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+.footer-divider {
+    border-color: #333;
+    margin: 2rem 0 1rem;
+}
+
+.footer-copy {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 991.98px) {
+    .noosh-navbar .nav-link {
+        margin: 0.25rem 0;
+    }
+
+    .btn-order {
+        display: inline-block;
+        margin-top: 0.75rem;
+    }
+}
+
+/* ============================================
+   FEATURED MEALS
+   ============================================ */
+.section-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    color: var(--color-ink);
+}
+
+.meal-card {
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.meal-card:hover {
+    transform: translateY(-4px);
+}
+
+.meal-card-image {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background-color: var(--color-gray-light);
+    overflow: hidden;
+}
+
+.meal-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-popular {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--color-ink);
+    color: var(--color-primary);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.5px;
+}
+
+.meal-card-body {
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.meal-name {
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+}
+
+.meal-description {
+    font-size: 0.85rem;
+    color: var(--color-gray-mid);
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.meal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meal-price {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--color-ink);
+}
+
+.meal-tags i {
+    margin-left: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.tag-veg {
+    color: #2E7D32;
+}
+
+.tag-spicy {
+    color: #D32F2F;
+}
+
+/* ============================================
+   RESPONSIVE — MEAL CARDS
+   ============================================ */
+@media (max-width: 767.98px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .meal-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   MENU PAGE
+   ============================================ */
+.menu-hero {
+    background-color: var(--color-ink);
+    padding: 3.5rem 0 2.5rem;
+    text-align: center;
+}
+
+.menu-hero .section-eyebrow {
+    color: var(--color-primary);
+}
+
+.menu-hero-title {
+    color: var(--color-white);
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.menu-controls {
+    background-color: var(--color-white);
+    padding: 2rem 0 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-search-wrap {
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto 1.5rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-mid);
+}
+
+.menu-search-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.75rem;
+    border: 2px solid var(--color-ink);
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.menu-search-input:focus {
+    border-color: var(--color-primary-dark);
+}
+
+.menu-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.filter-pill {
+    background: var(--color-gray-light);
+    border: 2px solid transparent;
+    border-radius: 999px;
+    padding: 0.45rem 1.1rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--color-ink);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.filter-pill:hover {
+    background-color: #ececec;
+}
+
+.filter-pill.active {
+    background-color: var(--color-primary);
+    border-color: var(--color-ink);
+}
+
+.menu-grid-section {
+    padding: 3rem 0 5rem;
+}
+
+.menu-no-results {
+    text-align: center;
+    color: var(--color-gray-mid);
+    padding: 3rem 0;
+    font-size: 1.05rem;
+}
+
+/* ============================================
+   RESPONSIVE — MENU PAGE
+   ============================================ */
+@media (max-width: 767.98px) {
+    .menu-controls {
+        padding: 1.5rem 0 1rem;
+    }
+
+    .filter-pill {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.9rem;
+    }
+}
+
+/* ============================================
+   CUSTOMIZE SHAWARMA BUILDER
+   ============================================ */
+.customize-hero {
+    background-color: var(--color-ink);
+    padding: 3.5rem 0 2.5rem;
+    text-align: center;
+}
+
+.customize-hero .section-eyebrow {
+    color: var(--color-primary);
+}
+
+.builder-section-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.builder-hint {
+    color: var(--color-gray-mid);
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Protein radio cards */
+.protein-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.protein-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.protein-option-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid #ddd;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.15s ease;
+}
+
+.protein-option input[type="radio"]:checked + .protein-option-label {
+    border-color: var(--color-ink);
+    background-color: var(--color-primary);
+}
+
+.protein-price {
+    color: var(--color-gray-mid);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.protein-option input[type="radio"]:checked + .protein-option-label .protein-price {
+    color: var(--color-ink);
+}
+
+/* Ingredient toggle grid */
+.ingredient-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.ingredient-toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.25rem 0.75rem;
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-md);
+    background-color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.ingredient-toggle i:first-child {
+    font-size: 1.3rem;
+}
+
+.ingredient-check {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 0.9rem;
+    color: var(--color-ink);
+    display: none;
+}
+
+.ingredient-toggle.active .ingredient-check {
+    display: block;
+}
+
+/* Removed (inactive) state — greyed out, struck through */
+.ingredient-toggle:not(.active) {
+    background-color: var(--color-gray-light);
+    border-color: #ddd;
+    color: var(--color-gray-mid);
+    opacity: 0.6;
+}
+
+.ingredient-toggle:not(.active) span {
+    text-decoration: line-through;
+}
+
+/* Order summary panel */
+.order-summary {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+    position: sticky;
+    top: 100px;
+}
+
+.summary-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.summary-included-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-gray-mid);
+    margin-bottom: 0.5rem;
+}
+
+.summary-ingredient-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.summary-ingredient-list li {
+    background-color: var(--color-gray-light);
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.summary-empty {
+    color: var(--color-gray-mid);
+    font-style: italic;
+    background: none !important;
+}
+
+.summary-divider {
+    margin: 1.25rem 0;
+    border-color: #eee;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+/* ============================================
+   RESPONSIVE — CUSTOMIZE BUILDER
+   ============================================ */
+@media (max-width: 991.98px) {
+    .order-summary {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .ingredient-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.customize-cta-wrap {
+    background-color: var(--color-white);
+    padding: 2.5rem 0 1rem;
+    text-align: center;
+}
+
+.customize-cta-wrap .btn {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+}
+
+/* ============================================
+   AUTH (LOGIN / OTP)
+   ============================================ */
+.auth-section {
+    background-color: var(--color-gray-light);
+    padding: 5rem 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.auth-card {
+    max-width: 440px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+}
+
+.auth-title {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: var(--color-gray-mid);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.auth-form .form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.auth-input {
+    padding: 0.7rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+}
+
+.auth-input:focus {
+    border-color: var(--color-ink);
+    box-shadow: none;
+}
+
+.auth-input-otp {
+    letter-spacing: 8px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.otp-simulation-notice {
+    background-color: #FFF8E1;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.auth-back-link {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-gray-mid);
+    text-decoration: none;
+}
+
+.auth-back-link:hover {
+    color: var(--color-ink);
+}
+
+/* ============================================
+   REWARDS DASHBOARD
+   ============================================ */
+.rewards-hero {
+    background-color: var(--color-ink);
+    padding: 3.5rem 0 2.5rem;
+}
+
+.rewards-hero .section-eyebrow {
+    color: var(--color-primary);
+}
+
+.rewards-hero .menu-hero-title {
+    color: var(--color-white);
+}
+
+.rewards-points-card,
+.rewards-history-card {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+}
+
+.rewards-points-label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-gray-mid);
+    margin-bottom: 0.25rem;
+}
+
+.rewards-points-value {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.rewards-points-value span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-gray-mid);
+}
+
+.rewards-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.rewards-progress-bar {
+    height: 12px;
+    border-radius: 999px;
+    background-color: var(--color-gray-light);
+}
+
+.rewards-progress-bar .progress-bar {
+    background-color: var(--color-primary);
+}
+
+.rewards-all-unlocked {
+    color: var(--color-primary-dark);
+    font-weight: 700;
+}
+
+.rewards-demo-note {
+    font-size: 0.75rem;
+    color: var(--color-gray-mid);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.milestone-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.milestone-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border: 2px solid #eee;
+    border-radius: var(--radius-sm);
+    color: var(--color-gray-mid);
+    font-weight: 600;
+}
+
+.milestone-item i {
+    font-size: 1.1rem;
+}
+
+.milestone-item.unlocked {
+    border-color: var(--color-primary);
+    background-color: #FFFBEF;
+    color: var(--color-ink);
+}
+
+.milestone-item.unlocked i {
+    color: var(--color-primary-dark);
+}
+
+.milestone-points {
+    margin-left: auto;
+    font-size: 0.85rem;
+}
+
+.rewards-empty {
+    color: var(--color-gray-mid);
+    font-size: 0.9rem;
+}
+
+.history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.history-description {
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+}
+
+.history-date {
+    font-size: 0.75rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 0;
+}
+
+.history-points {
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   CHARITY PAGE
+   ============================================ */
+.charity-hero {
+    background-color: var(--color-ink);
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.charity-hero .section-eyebrow {
+    color: var(--color-primary);
+}
+
+.charity-hero .menu-hero-title {
+    color: var(--color-white);
+    margin-bottom: 0.75rem;
+}
+
+.charity-hero-subtitle {
+    color: #ccc;
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.charity-body-text {
+    color: var(--color-gray-mid);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.charity-image-wrap img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.charity-fact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.charity-fact-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #eee;
+}
+
+.charity-fact-list li i {
+    color: var(--color-primary-dark);
+    width: 20px;
+}
+
+.charity-events {
+    background-color: var(--color-gray-light);
+}
+
+.charity-event-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    height: 100%;
+    box-shadow: var(--shadow-card);
+}
+
+.charity-event-icon {
+    font-size: 2rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+}
+
+.charity-event-card h5 {
+    margin-bottom: 0.75rem;
+}
+
+.charity-event-card p {
+    color: var(--color-gray-mid);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.charity-donate-card {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-md);
+    padding: 3rem 2rem;
+}
+
+.charity-donate-icon {
+    font-size: 2.5rem;
+    color: var(--color-ink);
+    margin-bottom: 1rem;
+}
+
+.charity-donate-card h2 {
+    margin-bottom: 0.75rem;
+}
+
+.charity-donate-card p {
+    color: #333;
+    margin-bottom: 1.75rem;
+}
+
+/* ============================================
+   RESPONSIVE — CHARITY PAGE
+   ============================================ */
+@media (max-width: 767.98px) {
+    .charity-image-wrap img {
+        height: 240px;
+    }
+}
+/* ============================================
+   STORE LOCATIONS
+   ============================================ */
+.locations-section {
+    background-color: var(--color-gray-light);
+}
+
+.store-card {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.store-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.store-mall {
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.store-address {
+    color: var(--color-gray-mid);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.store-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.store-detail i {
+    color: var(--color-gray-mid);
+    width: 16px;
+}
+
+.store-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.store-action-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.55rem 0.75rem;
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-ink);
+    text-decoration: none;
+    background-color: var(--color-white);
+    transition: all 0.15s ease;
+    white-space: nowrap;
+}
+
+.store-action-btn:hover {
+    background-color: var(--color-ink);
+    color: var(--color-white);
+}
+
+.store-action-whatsapp:hover {
+    background-color: #25D366;
+    border-color: #25D366;
+}
+
+.store-action-primary {
+    background-color: var(--color-primary);
+}
+
+.store-action-primary:hover {
+    background-color: var(--color-ink);
+    color: var(--color-primary);
+}
+
+.store-map-wrap {
+    line-height: 0; /* removes tiny default gap iframes sometimes introduce */
+}
+
+.store-map-wrap iframe {
+    display: block;
+}
+
+.store-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* ============================================
+   RESPONSIVE — STORE CARDS
+   ============================================ */
+@media (max-width: 767.98px) {
+    .store-actions {
+        flex-direction: column;
+    }
+
+    .store-action-btn {
+        flex: none;
+    }
+}
+/* ============================================
+   SPICE INDICATOR
+   ============================================ */
+.spice-indicator {
+    display: inline-flex;
+    gap: 2px;
+    margin-left: 0.4rem;
+}
+
+.spice-pepper {
+    font-size: 0.75rem;
+    color: #ddd; /* unfilled = light grey */
+}
+
+.spice-pepper.filled.level-1 { color: #7CB342; } /* Mild — green */
+.spice-pepper.filled.level-2 { color: #FBC02D; } /* Medium — gold */
+.spice-pepper.filled.level-3 { color: #FB8C00; } /* Hot — orange */
+.spice-pepper.filled.level-4 { color: #E53935; } /* Extra Hot — red */
+
+/* ============================================
+   CATERING
+   ============================================ */
+.catering-hero {
+    background-color: var(--color-ink);
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.catering-hero .section-eyebrow {
+    color: var(--color-primary);
+}
+
+.catering-hero .menu-hero-title {
+    color: var(--color-white);
+    margin-bottom: 0.75rem;
+}
+/* ============================================
+   DELIVERY SECTION (Uber Eats / Mr D)
+   ============================================ */
+.delivery-section {
+    background-color: var(--color-ink);
+}
+
+.delivery-eyebrow {
+    color: var(--color-primary);
+}
+
+.delivery-title {
+    color: var(--color-white);
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.delivery-subtitle {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 420px;
+}
+
+.delivery-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.delivery-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.15s ease;
+}
+
+.delivery-btn-uber {
+    background-color: #06C167;
+    color: var(--color-ink);
+}
+
+.delivery-btn-uber:hover {
+    background-color: var(--color-white);
+    color: var(--color-ink);
+}
+
+.delivery-btn-mrd {
+    background-color: var(--color-primary);
+    color: var(--color-ink);
+}
+
+.delivery-btn-mrd:hover {
+    background-color: var(--color-white);
+    color: var(--color-ink);
+}
+
+.delivery-visual {
+    background-color: rgba(255, 199, 44, 0.08);
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.delivery-visual-icon {
+    font-size: 4rem;
+    color: var(--color-primary);
+}
+
+.delivery-visual-label {
+    color: var(--color-white);
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   RESPONSIVE — DELIVERY SECTION
+   ============================================ */
+@media (max-width: 767.98px) {
+    .delivery-visual {
+        width: 200px;
+        height: 200px;
+        margin-top: 2rem;
+    }
+
+    .delivery-visual-icon {
+        font-size: 3rem;
+    }
+}

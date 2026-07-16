@@ -1,0 +1,113 @@
+﻿@using NooshApp.Helpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>@ViewData["Title"] - NooshApp</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Site styles -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="~/manifest.json" />
+    <meta name="theme-color" content="#FFC72C" />
+
+    <!-- iOS-specific PWA support (Safari doesn't fully read manifest.json) -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="NOOSH." />
+    <link rel="apple-touch-icon" href="~/images/icons/icon-192.png" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg noosh-navbar sticky-top">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    NOOSH<span class="brand-dot">.</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Menu" asp-action="Index">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            @if (Context.Session.IsLoggedIn())
+                            {
+                                <a class="nav-link" asp-controller="Rewards" asp-action="Index">Rewards</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link" asp-controller="Account" asp-action="Login">Rewards</a>
+                            }
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" asp-controller="Catering" asp-action="Request">Catering</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Charity">Charity</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Careers">Careers</a>
+                        </li>
+                    </ul>
+                    <a class="btn btn-order" asp-controller="Menu" asp-action="Index">Order Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="noosh-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="footer-brand">NOOSH<span class="brand-dot">.</span></h5>
+                    <p class="footer-tagline">Bold flavours, honest ingredients.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a asp-controller="Menu" asp-action="Index">Menu</a></li>
+                        <li><a asp-controller="Rewards" asp-action="Index">Rewards</a></li>
+                        <li><a asp-controller="Catering" asp-action="Request">Catering</a></li>
+                        <li><a asp-controller="Home" asp-action="Careers">Careers</a></li>
+                        <li><a asp-controller="Home" asp-action="Terms">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6>Contact</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><i class="fa-solid fa-phone"></i> Contact page coming soon</li>
+                        <li><i class="fa-brands fa-whatsapp"></i> WhatsApp us</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider" />
+            <p class="footer-copy">&copy; @DateTime.Now.Year NooshApp. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/service-worker-register.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

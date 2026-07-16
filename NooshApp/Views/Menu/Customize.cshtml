@@ -1,0 +1,83 @@
+@model NooshApp.ViewModels.CustomizeViewModel
+@{
+    ViewData["Title"] = "Customize Your Shawarma";
+}
+
+<section class="customize-hero">
+    <div class="container">
+        <p class="section-eyebrow">Build It Your Way</p>
+        <h1 class="menu-hero-title">Customize Your Shawarma</h1>
+    </div>
+</section>
+
+<section class="customize-builder py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Left: Protein choice + ingredient toggles -->
+            <div class="col-lg-7">
+                <h4 class="builder-section-title">1. Choose Your Protein</h4>
+                <div class="protein-options" id="proteinOptions">
+                    @for (int i = 0; i < Model.Proteins.Count; i++)
+                    {
+                        var protein = Model.Proteins[i];
+                        <label class="protein-option">
+                            <input type="radio" name="protein" value="@protein.Name" data-price="@protein.Price.ToString("0.00")" checked="@(i == 0 ? "checked" : null)" />
+                            <span class="protein-option-label">
+                                <span class="protein-name">@protein.Name</span>
+                                <span class="protein-price">R@(protein.Price.ToString("0.00"))</span>
+                            </span>
+                        </label>
+                    }
+                </div>
+
+                <h4 class="builder-section-title mt-5">2. Customize Ingredients</h4>
+                <p class="builder-hint">Everything is included by default — tap to remove what you don't want.</p>
+
+                <div class="ingredient-grid" id="ingredientGrid">
+                    @foreach (var ingredient in Model.Ingredients)
+                    {
+                        <button type="button" class="ingredient-toggle active" data-ingredient-id="@ingredient.Id" data-name="@ingredient.Name">
+                            <i class="@ingredient.Icon"></i>
+                            <span>@ingredient.Name</span>
+                            <i class="fa-solid fa-circle-check ingredient-check"></i>
+                        </button>
+                    }
+                </div>
+            </div>
+
+            <!-- Right: Live summary -->
+            <div class="col-lg-5">
+                <div class="order-summary" id="orderSummary">
+                    <h4 class="summary-title">Your Order</h4>
+
+                    <div class="summary-line">
+                        <span>Protein</span>
+                        <span id="summaryProtein">Chicken</span>
+                    </div>
+
+                    <div class="summary-included">
+                        <p class="summary-included-label">Included:</p>
+                        <ul id="summaryIngredientList" class="summary-ingredient-list">
+                            <!-- populated by JS -->
+                        </ul>
+                    </div>
+
+                    <hr class="summary-divider" />
+
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="summaryTotal">R70.00</span>
+                    </div>
+
+                    <button type="button" class="btn btn-hero-primary w-100 mt-4" id="addToOrderBtn">
+                        <i class="fa-solid fa-cart-plus me-2"></i>Add To Order
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/customize-builder.js"></script>
+}

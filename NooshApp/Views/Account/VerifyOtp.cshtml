@@ -1,0 +1,50 @@
+@model NooshApp.ViewModels.VerifyOtpViewModel
+@{
+    ViewData["Title"] = "Verify Code";
+}
+
+<section class="auth-section">
+    <div class="container">
+        <div class="auth-card">
+            <p class="section-eyebrow text-center">Noosh Rewards</p>
+            <h1 class="auth-title">Enter Your Code</h1>
+            <p class="auth-subtitle">
+                We sent a 6-digit code to <strong>@Model.PhoneNumber</strong>.
+            </p>
+
+            @if (ViewBag.SimulatedOtp != null)
+            {
+                <div class="otp-simulation-notice">
+                    <i class="fa-solid fa-flask me-2"></i>
+                    <strong>Simulation mode:</strong> your code is <strong>@ViewBag.SimulatedOtp</strong>
+                    (in production this would arrive via SMS instead).
+                </div>
+            }
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <form asp-controller="Account" asp-action="VerifyOtp" method="post" class="auth-form">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="PhoneNumber" />
+
+                <div class="mb-3">
+                    <label asp-for="Otp" class="form-label"></label>
+                    <input asp-for="Otp" class="form-control auth-input auth-input-otp" placeholder="000000" maxlength="6" autocomplete="one-time-code" />
+                    <span asp-validation-for="Otp" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-hero-primary w-100">
+                    <i class="fa-solid fa-check me-2"></i>Verify &amp; Log In
+                </button>
+            </form>
+
+            <a asp-controller="Account" asp-action="Login" class="auth-back-link">
+                <i class="fa-solid fa-arrow-left me-1"></i>Use a different number
+            </a>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
