@@ -18,6 +18,15 @@
     --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -41,6 +50,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-primary);
     padding: 1rem 0;
     border-bottom: 3px solid var(--color-ink);
+}
+
+/* Applies ONLY when running as an installed standalone PWA — not in a regular browser tab */
+@media (display-mode: standalone) {
+    .noosh-navbar {
+        background-color: var(--color-white);
+    }
 }
 
 .navbar-brand {
