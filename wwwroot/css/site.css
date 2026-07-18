@@ -52,13 +52,6 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 3px solid var(--color-ink);
 }
 
-/* Applies ONLY when running as an installed standalone PWA — not in a regular browser tab */
-@media (display-mode: standalone) {
-    .noosh-navbar {
-        background-color: var(--color-white);
-    }
-}
-
 .navbar-brand {
     font-family: var(--font-heading);
     font-weight: 800;
