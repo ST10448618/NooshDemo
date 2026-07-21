@@ -1576,17 +1576,4 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
 
-    /* ---- Footer ---- */
-    .noosh-footer .row {
-        text-align: center;
-    }
-
-    .footer-brand-row {
-        justify-content: center;
-    }
-
-    .footer-links {
-        display: inline-block;
-        text-align: left;
-    }
 }
