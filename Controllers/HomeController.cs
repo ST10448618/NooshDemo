@@ -67,8 +67,28 @@ namespace NooshApp.Controllers
             };
         }
 
+        public IActionResult Charity()
+        {
+            ViewBag.GalleryImages = GetCharityGalleryImages();
+            ViewBag.DonationEmail = _configuration["BusinessContact:DonationEmail"];
+            return View();
+        }
+
+        private List<string> GetCharityGalleryImages()
+        {
+            return new List<string>
+            {
+                "/images/charity/gallery-1.jpg",
+                "/images/charity/gallery-2.jpg",
+                "/images/charity/gallery-3.jpg",
+                "/images/charity/gallery-4.jpg",
+                "/images/charity/gallery-5.jpg",
+                "/images/charity/gallery-6.jpg",
+                "/images/charity/gallery-7.jpg"
+            };
+        }
+
         public IActionResult Contact() => View();
-        public IActionResult Charity() => View();
         public IActionResult Careers() => View();
         public IActionResult Terms() => View();
     }

@@ -75,6 +75,18 @@ namespace NooshApp.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("ContainsDairy")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("ContainsEggs")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("ContainsSesame")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("ContainsWheat")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 

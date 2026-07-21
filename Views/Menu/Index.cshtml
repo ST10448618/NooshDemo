@@ -10,12 +10,6 @@
     </div>
 </section>
 
-<div class="container text-center customize-cta-wrap">
-    <a asp-controller="Menu" asp-action="Customize" class="btn btn-hero-primary">
-        <i class="fa-solid fa-sliders me-2"></i>Build Your Own Shawarma
-    </a>
-</div>
-
 <section class="menu-controls">
     <div class="container">
         <div class="menu-search-wrap">
@@ -29,6 +23,58 @@
             {
                 <button class="filter-pill" data-category="@category">@category</button>
             }
+        </div>
+    </div>
+</section>
+
+<section class="heat-guide-section">
+    <div class="container">
+        <button class="heat-guide-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#heatGuideCollapse" aria-expanded="false">
+            <i class="fa-solid fa-pepper-hot"></i>
+            <span>What do the spice levels mean?</span>
+            <i class="fa-solid fa-chevron-down heat-guide-chevron"></i>
+        </button>
+
+        <div class="collapse" id="heatGuideCollapse">
+            <div class="heat-guide-card">
+                <div class="heat-guide-row">
+                    <span class="spice-indicator">
+                        <i class="fa-solid fa-pepper-hot spice-pepper filled level-1"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper"></i>
+                    </span>
+                    <span class="heat-guide-label">Mild</span>
+                </div>
+                <div class="heat-guide-row">
+                    <span class="spice-indicator">
+                        <i class="fa-solid fa-pepper-hot spice-pepper filled level-2"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper filled level-2"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper"></i>
+                    </span>
+                    <span class="heat-guide-label">Medium</span>
+                </div>
+                <div class="heat-guide-row">
+                    <span class="spice-indicator">
+                        <i class="fa-solid fa-pepper-hot spice-pepper filled level-3"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper filled level-3"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper filled level-3"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper"></i>
+                    </span>
+                    <span class="heat-guide-label">Hot</span>
+                </div>
+                <div class="heat-guide-row">
+                    <span class="spice-indicator">
+                        <i class="fa-solid fa-pepper-hot spice-pepper filled level-4"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper filled level-4"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper filled level-4"></i>
+                        <i class="fa-solid fa-pepper-hot spice-pepper filled level-4"></i>
+                    </span>
+                    <span class="heat-guide-label">Extra Hot</span>
+                </div>
+                <p class="heat-guide-hashtag">#HowDoYouNOOSH?</p>
+            </div>
         </div>
     </div>
 </section>
@@ -52,13 +98,13 @@
                             <p class="meal-description">@item.Description</p>
                             <div class="meal-footer">
                                 <span class="meal-price">R@(item.Price.ToString("0.00"))</span>
-                                <div class="meal-tags">
-                                    @if (item.IsVegetarian)
-                                    {
-                                        <i class="fa-solid fa-leaf tag-veg" title="Vegetarian"></i>
-                                    }
-                                <partial name="_SpiceIndicator" model="item.SpiceLevel" />
-                                </div>
+                            <div class="meal-tags">
+                                @if (item.IsVegetarian)
+                                {
+                                    <i class="fa-solid fa-leaf tag-veg" title="Vegetarian"></i>
+                                }
+                                <partial name="_AllergenIcons" model="item" />
+                            </div>
                             </div>
                         </div>
                     </div>

@@ -19,15 +19,11 @@
                 <p class="section-eyebrow">Our Mission</p>
                 <h2 class="section-title">Feeding More Than Just Appetites</h2>
                 <p class="charity-body-text">
-                    We believe great food should bring people together — and that includes
-                    supporting the community that supports us. A portion of every order
-                    contributes toward local initiatives focused on food security, youth
-                    development, and community wellbeing.
+                At NOOSH, we believe that a great meal can do more than satisfy hunger—it can bring hope, restore dignity, and bring people together.
+                The Nourish by NOOSH Foundation is our community initiative dedicated to supporting individuals and families 
+                in need through food relief, community outreach, and meaningful partnerships.
                 </p>
-                <p class="charity-body-text">
-                    From meal donations to sponsoring local events, Noosh is committed to
-                    showing up for our neighbours, not just our customers.
-                </p>
+
             </div>
             <div class="col-lg-6">
                 <div class="charity-image-wrap">
@@ -42,58 +38,37 @@
     <div class="container">
         <div class="row align-items-center g-5 flex-lg-row-reverse">
             <div class="col-lg-6">
-                <p class="section-eyebrow">Annual Event</p>
-                <h2 class="section-title">The Noosh Charity Run</h2>
+                <p class="section-eyebrow">Our Vision</p>
+                <h2 class="section-title">Our Commitment</h2>
                 <p class="charity-body-text">
-                    Once a year, we lace up alongside our community for the Noosh Charity Run —
-                    a fun, family-friendly 5km/10km route through the city, with every entry fee
-                    going directly toward our partner charities.
+                    The Nourish by NOOSH Foundation is more than a charitable initiative—it is our promise to give back to the communities that have supported us.
+                    Whether we're responding to community requests, assisting families during difficult times, 
+                    or partnering with local organisations, we are committed to serving with sincerity, dignity, and care.
                 </p>
-                <ul class="charity-fact-list">
-                    <li><i class="fa-solid fa-calendar-days"></i> Held annually — date announced closer to the time</li>
-                    <li><i class="fa-solid fa-route"></i> 5km and 10km route options</li>
-                    <li><i class="fa-solid fa-people-group"></i> Open to all ages and fitness levels</li>
-                    <li><i class="fa-solid fa-shirt"></i> Free Noosh event t-shirt for all entrants</li>
-                </ul>
             </div>
             <div class="col-lg-6">
                 <div class="charity-image-wrap">
-                    <img src="~/images/charity/run.jpg" alt="Charity run participants" onerror="this.onerror=null; this.src='/images/placeholder-food.jpg';" />
+                    <img src="~/images/charity/vision.jpg" alt="Charity run participants" onerror="this.onerror=null; this.src='/images/placeholder-food.jpg';" />
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="charity-events py-5">
+<section class="charity-gallery py-5">
     <div class="container">
         <div class="section-header text-center mb-5">
-            <p class="section-eyebrow">Get Involved</p>
-            <h2 class="section-title">Upcoming Events</h2>
+            <p class="section-eyebrow">In The Community</p>
+            <h2 class="section-title">Moments That Matter</h2>
         </div>
 
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="charity-event-card">
-                    <i class="fa-solid fa-hand-holding-heart charity-event-icon"></i>
-                    <h5>Community Meal Drives</h5>
-                    <p>Monthly meal packs prepared and distributed to families in need across our local area.</p>
+        <div class="charity-gallery-grid">
+            @foreach (var imagePath in (List<string>)ViewBag.GalleryImages)
+            {
+                <div class="charity-gallery-item">
+                    <img src="@imagePath" alt="Noosh community charity work" onerror="this.closest('.charity-gallery-item').style.display='none';" />
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="charity-event-card">
-                    <i class="fa-solid fa-graduation-cap charity-event-icon"></i>
-                    <h5>Youth Skills Workshops</h5>
-                    <p>Hands-on kitchen and hospitality skills training for local youth, in partnership with community centres.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="charity-event-card">
-                    <i class="fa-solid fa-seedling charity-event-icon"></i>
-                    <h5>Community Garden Support</h5>
-                    <p>Supporting local food gardens that supply fresh produce back into community feeding schemes.</p>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -107,7 +82,7 @@
                 Every contribution — big or small — helps us do more for our community.
                 Reach out to our team to find out how you can get involved or contribute directly.
             </p>
-            <a asp-controller="Home" asp-action="Contact" class="btn btn-hero-primary">
+            <a href="mailto:@ViewBag.DonationEmail?subject=Donation%20Enquiry" class="btn btn-hero-primary">
                 <i class="fa-solid fa-envelope me-2"></i>Get In Touch
             </a>
         </div>

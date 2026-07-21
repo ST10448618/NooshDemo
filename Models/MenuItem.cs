@@ -43,5 +43,10 @@ namespace NooshApp.Models
         public bool IsAvailable { get; set; } = true; // lets admin hide items without deleting them
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public bool ContainsEggs { get; set; } = false;
+        public bool ContainsWheat { get; set; } = false;
+        public bool ContainsDairy { get; set; } = false;
+        public bool ContainsSesame { get; set; } = false;
     }
 }
