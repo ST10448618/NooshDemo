@@ -5,11 +5,17 @@ using NooshApp.Repositories.Interfaces;
 using NooshApp.Services;
 using NooshApp.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.StaticFiles;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddResponseCompression(options =>
+{
+    options.EnableForHttps = true;
+});
 
 builder.Services.AddScoped<IMenuItemRepository, MenuItemRepository>();
 builder.Services.AddScoped<IMenuService, MenuService>();
@@ -48,6 +54,17 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+app.UseResponseCompression();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    OnPrepareResponse = context =>
+    {
+        context.Context.Response.Headers.Append(
+            "Cache-Control", "public,max-age=604800");
+    }
+});
 
 app.UseHttpsRedirection();
 app.UseRouting();

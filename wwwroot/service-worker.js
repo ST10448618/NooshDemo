@@ -2,7 +2,7 @@
 // Handles install-time caching, activation cleanup, and fetch interception
 // for offline support.
 
-const CACHE_VERSION = 'noosh-cache-v1';
+const CACHE_VERSION = 'noosh-cache-v2';
 
 // Core assets needed for the app shell to work offline.
 // Keep this list focused — cache what's needed for basic navigation,
@@ -15,7 +15,27 @@ const CORE_ASSETS = [
     '/lib/bootstrap/dist/css/bootstrap.min.css',
     '/lib/bootstrap/dist/js/bootstrap.bundle.min.js',
     '/images/icons/icon-192.png',
-    '/images/icons/icon-512.png'
+    '/images/icons/icon-512.png',
+    '/images/hero-placeholder.jpg',
+    '/images/placeholder-food.jpg',
+    '/images/menu/chicken-wrap.jpg',
+    '/images/menu/beef-wrap.jpg',
+    '/images/menu/falafel-wrap.jpg',
+    '/images/menu/chip-wrap.jpg',
+    '/images/menu/chicken-bowl.jpg',
+    '/images/menu/beef-bowl.jpg',
+    '/images/menu/falafel-bowl.jpg',
+    '/images/menu/chilli-cheese-fries.jpg',
+    '/images/menu/chilli-cheese-fries-chicken.jpg',
+    '/images/menu/chilli-cheese-fries-beef.jpg',
+    '/images/menu/fries-medium.jpg',
+    '/images/menu/fries-medium-saucy.jpg',
+    '/images/menu/fries-large.jpg',
+    '/images/menu/fries-large-saucy.jpg',
+    '/images/menu/sauce-chilli-paste.jpg',
+    '/images/menu/sauce-garlic.jpg',
+    '/images/menu/sauce-peri-peri.jpg',
+    '/images/menu/kids-meal.jpg'
 ];
 
 // --- INSTALL: runs once when the service worker is first registered ---
