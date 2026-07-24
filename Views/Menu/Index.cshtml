@@ -87,7 +87,7 @@
                 <div class="col-6 col-md-4 col-lg-3 menu-grid-item" data-category="@item.Category" data-name="@item.Name.ToLower()">
                     <div class="meal-card">
                         <div class="meal-card-image">
-                            <img src="@item.ImageUrl" alt="@item.Name" loading="lazy" onerror="this.onerror=null; this.src='/images/placeholder-food.jpg';" />
+                            <img src="@item.ImageUrl" alt="@item.Name" onerror="this.onerror=null; this.src='/images/placeholder-food.jpg';" />
                             @if (item.IsPopular)
                             {
                                 <span class="badge-popular">Popular</span>

@@ -26,6 +26,13 @@ builder.Services.AddScoped<IRewardRepository, RewardRepository>();
 builder.Services.AddScoped<IRewardService, RewardService>();
 builder.Services.AddScoped<ICateringRepository, CateringRepository>();
 builder.Services.AddScoped<ICateringService, CateringService>();
+builder.Services.AddScoped<IApplicationRepository, ApplicationRepository>();
+builder.Services.AddScoped<ICareersService, CareersService>();
+
+builder.Services.Configure<Microsoft.AspNetCore.Http.Features.FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 10 * 1024 * 1024;
+});
 
 builder.Services.AddDistributedMemoryCache(); // required backing store for Session
 builder.Services.AddSession(options =>
@@ -54,17 +61,6 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
-app.UseResponseCompression();
-
-app.UseStaticFiles(new StaticFileOptions
-{
-    OnPrepareResponse = context =>
-    {
-        context.Context.Response.Headers.Append(
-            "Cache-Control", "public,max-age=604800");
-    }
-});
 
 app.UseHttpsRedirection();
 app.UseRouting();

@@ -19,6 +19,7 @@ namespace NooshApp.Data
         public DbSet<RewardHistory> RewardHistories { get; set; }
         public DbSet<RewardMilestone> RewardMilestones { get; set; }
         public DbSet<CateringRequest> CateringRequests { get; set; }
+        public DbSet<Application> Applications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

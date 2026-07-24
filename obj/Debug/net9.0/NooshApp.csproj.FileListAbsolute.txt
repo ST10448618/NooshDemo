@@ -222,5 +222,15 @@ C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\ref\NooshApp.dl
 C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\oymqxtoxqy-m3a0jgd7ve.gz
 C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\fuh8rwj3b7-yel7xkfm6q.gz
 C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\ecf26mep5s-nprdmnb9rg.gz
-C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\pf5u7w05yq-cguqdgcc2f.gz
-C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\23o29vlkws-tgvrti0wqy.gz
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\DocumentFormat.OpenXml.dll
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\UglyToad.PdfPig.Core.dll
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\UglyToad.PdfPig.DocumentLayoutAnalysis.dll
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\UglyToad.PdfPig.Fonts.dll
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\UglyToad.PdfPig.Package.dll
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\UglyToad.PdfPig.Tokenization.dll
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\UglyToad.PdfPig.Tokens.dll
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\UglyToad.PdfPig.dll
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\System.IO.Packaging.dll
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\23o29vlkws-h0a4qzxcpj.gz
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\pf5u7w05yq-eex802pexg.gz
