@@ -1614,6 +1614,37 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
 
+    /* ---- Menu legend (Heat Scale + Allergens) ---- */
+    .menu-legend-column:first-child {
+        text-align: center;
+    }
+
+    .menu-legend-row {
+        display: inline-block;
+        text-align: left;
+        margin: 0.3rem 0;
+    }
+
+    .menu-legend-row .spice-indicator,
+    .menu-legend-row .menu-legend-label {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .menu-legend-row .menu-legend-label {
+        margin-left: 0.5rem;
+    }
+
+    .menu-legend-column:last-child {
+        text-align: center;
+    }
+
+    .menu-legend-allergens {
+        display: inline-flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
 }
 
 /* ============================================
