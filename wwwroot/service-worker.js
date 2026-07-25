@@ -2,7 +2,7 @@
 // Handles install-time caching, activation cleanup, and fetch interception
 // for offline support.
 
-const CACHE_VERSION = 'noosh-cache-v7';
+const CACHE_VERSION = 'noosh-cache-v8';
 
 // Core assets needed for the app shell to work offline.
 // Keep this list focused — cache what's needed for basic navigation,
