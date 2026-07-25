@@ -1627,17 +1627,10 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
     }
 
-    .menu-legend-row {
-        justify-content: flex-start;
-        width: fit-content;
-        margin: 0 auto;
+    .menu-legend-title {
+        text-align: center;
+        width: 100%;
     }
-
-    .menu-legend-row .spice-indicator {
-        width: 76px;
-        flex-shrink: 0;
-    }
-
 }
 
 /* ============================================
