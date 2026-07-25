@@ -62,7 +62,18 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseResponseCompression();
 app.UseHttpsRedirection();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    OnPrepareResponse = context =>
+    {
+        context.Context.Response.Headers.Append(
+            "Cache-Control", "public,max-age=3600");
+    }
+});
+
 app.UseRouting();
 app.UseSession();
 app.UseAuthorization();
