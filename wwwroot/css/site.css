@@ -1700,8 +1700,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-legend-row {
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
-    width: 100%;
-    max-width: 260px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.menu-legend-row .spice-indicator {
+    width: 80px;
+    flex-shrink: 0;
 }
