@@ -1685,3 +1685,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-gray-mid);
     margin-bottom: 2rem;
 }
+
+/* ---- Menu legend (Heat Scale + Allergens) ---- */
+.menu-legend-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
