@@ -1279,72 +1279,114 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
-   HEAT GUIDE (Menu page)
+   MENU LEGEND (Heat Scale + Allergens)
    ============================================ */
-.heat-guide-section {
+.menu-legend-section {
     background-color: var(--color-white);
-    padding: 0 0 1.5rem;
+    padding: 1.5rem 0 2rem;
 }
 
-.heat-guide-toggle {
+.menu-legend-card {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 0.6rem;
-    background: none;
-    border: none;
-    color: var(--color-gray-mid);
-    font-weight: 600;
-    font-size: 0.85rem;
-    padding: 0.5rem 0;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.heat-guide-toggle i:first-child {
-    color: var(--color-primary-dark);
-}
-
-.heat-guide-chevron {
-    transition: transform 0.2s ease;
-    font-size: 0.7rem;
-}
-
-.heat-guide-toggle[aria-expanded="true"] .heat-guide-chevron {
-    transform: rotate(180deg);
-}
-
-.heat-guide-card {
-    max-width: 320px;
-    margin: 0.75rem auto 0;
+    align-items: flex-start;
+    gap: 2.5rem;
     background-color: var(--color-gray-light);
     border-radius: var(--radius-md);
-    padding: 1.25rem 1.5rem;
+    padding: 1.5rem 2rem;
+    max-width: 640px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
-.heat-guide-row {
+.menu-legend-title {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--color-gray-mid);
+    margin-bottom: 0.75rem;
+}
+
+.menu-legend-column {
+    flex: 1;
+    min-width: 160px;
+}
+
+.menu-legend-divider {
+    width: 2px;
+    align-self: stretch;
+    background-color: #e0e0e0;
+}
+
+.menu-legend-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.4rem 0;
+    gap: 1rem;
+    padding: 0.3rem 0;
 }
 
-.heat-guide-row .spice-pepper {
-    font-size: 0.95rem;
+.menu-legend-row .spice-pepper {
+    font-size: 0.9rem;
 }
 
-.heat-guide-label {
+.menu-legend-label {
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
 }
 
-.heat-guide-hashtag {
+.menu-legend-allergens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.menu-legend-allergen-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.2rem;
+    text-align: center;
+}
+
+.allergen-icon-lg {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.menu-legend-allergens .menu-legend-label {
+    white-space: normal;
+    line-height: 1.2;
+}
+
+.menu-legend-hashtag {
     text-align: center;
     font-weight: 800;
     font-size: 0.8rem;
     color: var(--color-primary-dark);
     margin: 1rem 0 0;
     letter-spacing: 0.5px;
+}
+
+/* ============================================
+   RESPONSIVE — MENU LEGEND
+   ============================================ */
+@media (max-width: 575.98px) {
+    .menu-legend-card {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .menu-legend-divider {
+        width: 100%;
+        height: 2px;
+    }
 }
 
 /* ============================================
