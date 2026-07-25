@@ -1574,10 +1574,6 @@ h1, h2, h3, h4, h5, h6 {
         gap: 1rem;
     }
 
-    /* ---- Auth (login/OTP) cards already center themselves via max-width:
-           auto margins, but ensure form labels/inputs stay left-aligned
-           for readability — only the card itself centers on the page. ---- */
-
     /* ---- Store cards: center the mall/address block text ---- */
     .store-card-body {
         text-align: center;
@@ -1633,13 +1629,12 @@ h1, h2, h3, h4, h5, h6 {
 
     .menu-legend-row {
         justify-content: flex-start;
-        gap: 1rem;
-        width: auto;
+        width: fit-content;
         margin: 0 auto;
     }
 
     .menu-legend-row .spice-indicator {
-        width: 80px;
+        width: 76px;
         flex-shrink: 0;
     }
 
