@@ -127,9 +127,14 @@
                     <p class="store-mall"><i class="fa-solid fa-store me-2"></i>@store.MallName</p>
                     <p class="store-address">@store.Address</p>
 
-                    <div class="store-detail">
+                    <div class="store-detail store-hours-detail">
                         <i class="fa-solid fa-clock"></i>
-                        <span>@store.OpeningHours</span>
+                        <div class="store-hours-list">
+                            @foreach (var line in store.HoursSchedule)
+                            {
+                                <span>@line</span>
+                            }
+                        </div>
                     </div>
 
                     <div class="store-actions">
