@@ -127,15 +127,27 @@
                     <p class="store-mall"><i class="fa-solid fa-store me-2"></i>@store.MallName</p>
                     <p class="store-address">@store.Address</p>
 
-                    <div class="store-detail store-hours-detail">
-                        <i class="fa-solid fa-clock"></i>
-                        <div class="store-hours-list">
-                            @foreach (var line in store.HoursSchedule)
+                <div class="store-detail store-hours-detail">
+                    <i class="fa-solid fa-clock"></i>
+                    <div class="store-hours-list">
+                        @foreach (var line in store.HoursSchedule)
+                        {
+                            @if (line.IsClosure)
                             {
-                                <span>@line</span>
+                                <span class="store-hours-closure">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    @line.Label: @line.Time
+                                </span>
                             }
-                        </div>
+                            else
+                            {
+                                <span class="store-hours-line">
+                                    <strong>@line.Label:</strong> @line.Time
+                                </span>
+                            }
+                        }
                     </div>
+                </div>
 
                     <div class="store-actions">
                         <a href="tel:@store.PhoneNumber" class="store-action-btn">

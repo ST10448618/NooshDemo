@@ -1699,3 +1699,32 @@ h1, h2, h3, h4, h5, h6 {
 .store-hours-list span {
     display: block;
 }
+
+/* ============================================
+   STORE HOURS (with icons + closure highlight)
+   ============================================ */
+.store-hours-detail {
+    align-items: flex-start;
+}
+
+.store-hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.store-hours-line strong {
+    font-weight: 700;
+}
+
+.store-hours-closure {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #D32F2F;
+    font-weight: 700;
+}
+
+.store-hours-closure i {
+    font-size: 0.8rem;
+}

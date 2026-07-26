@@ -42,10 +42,10 @@ namespace NooshApp.Controllers
                     MallName = "Saxony Westwood Mall",
                     Address = "Westwood Mall, Lincoln Terrace, Westville, Durban",
                     PhoneNumber = "087 226 6674",
-                    HoursSchedule = new List<string>
+                    HoursSchedule = new List<StoreHoursLine>
                     {
-                        "Sun - Mon: 10:00 - 20:00",
-                        "Fri: Closed 12:15 - 13:15"
+                        new StoreHoursLine { Label = "Sun - Mon", Time = "10:00 - 20:00" },
+                        new StoreHoursLine { Label = "Fri", Time = "Closed 12:15 - 13:15", IsClosure = true }
                     },
                     MapEmbedUrl =  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.248254569304!2d30.961017199999997!3d-29.8282552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7019e07301083%3A0x17534deb24a7a4ad!2sNoosh%20Saxony%20Westwood%20Mall!5e0!3m2!1sen!2sza!4v1784144426551!5m2!1sen!2sza"
                 },
@@ -55,12 +55,12 @@ namespace NooshApp.Controllers
                     MallName = "Musgrave Centre",
                     Address = "279 Florida Rd, Windermere, Berea",
                     PhoneNumber = "087 226 6674",
-                    HoursSchedule = new List<string>
-                    {
-                        "Sun - Thu: 11:00 - 20:00",
-                        "Fri: 13:00 - 22:00",
-                        "Sat: 11:00 - 22:00"
-                    },
+                HoursSchedule = new List<StoreHoursLine>
+                {
+                    new StoreHoursLine { Label = "Sun - Thu", Time = "11:00 - 20:00" },
+                    new StoreHoursLine { Label = "Fri", Time = "13:00 - 22:00" },
+                    new StoreHoursLine { Label = "Sat", Time = "11:00 - 22:00" }
+                },
                     MapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.177084092737!2d31.012795600000008!3d-29.830309900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef707005debfad1%3A0xbda15fc83aa5af0c!2sNoosh%20Florida%20Road!5e0!3m2!1sen!2sza!4v1784145278083!5m2!1sen!2sza" 
                 },
                 new StoreLocation
@@ -69,10 +69,10 @@ namespace NooshApp.Controllers
                     MallName = "The Pavilion Shopping Centre",
                     Address = "5 Jack Martens Dr, Westville, Durban",
                     PhoneNumber = "087 226 6674",
-                    HoursSchedule = new List<string>
+                    HoursSchedule = new List<StoreHoursLine>
                     {
-                        "Sun - Thu: 10:00 - 20:00",
-                        "Fri - Sat: 10:00 - 21:00"
+                        new StoreHoursLine { Label = "Sun - Thu", Time = "10:00 - 20:00" },
+                        new StoreHoursLine { Label = "Fri - Sat", Time = "10:00 - 21:00" }
                     },
                     MapEmbedUrl =  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.562523287646!2d30.938385900000004!3d-29.848047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef701fc29e700a7%3A0xb7a8225019ec66b2!2sNoosh%20Pavilion%20Shopping%20Centre!5e0!3m2!1sen!2sza!4v1784145140210!5m2!1sen!2sza" 
 
