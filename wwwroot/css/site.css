@@ -1728,3 +1728,13 @@ h1, h2, h3, h4, h5, h6 {
 .store-hours-closure i {
     font-size: 0.8rem;
 }
+
+.store-hours-detail {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .store-hours-list {
+        align-items: center;
+    }
