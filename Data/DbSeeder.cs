@@ -29,7 +29,7 @@ namespace NooshApp.Data
                 // ---------- Shawarma Wraps ----------
                 new MenuItem
                 {
-                    Name = "Chicken Wrap",
+                    Name = "Chicken Shawarma ",
                     Description = "Grilled chicken, onions, tomatoes, pickles, fried brinjal, cabbage, lettuce, cheese and fries.",
                     Price = 80.00m,
                     Category = "Shawarma Wraps",
@@ -40,7 +40,7 @@ namespace NooshApp.Data
                 },
                 new MenuItem
                 {
-                    Name = "Beef Wrap",
+                    Name = "Beef Shawarma ",
                     Description = "Slow-cooked beef, onions, tomatoes, pickles, fried brinjal, cabbage, lettuce, cheese and fries.",
                     Price = 90.00m,
                     Category = "Shawarma Wraps",
@@ -51,7 +51,7 @@ namespace NooshApp.Data
                 },
                 new MenuItem
                 {
-                    Name = "Falafel Wrap",
+                    Name = "Falafel Shawarma ",
                     Description = "Crispy falafel, onions, tomatoes, pickles, fried brinjal, cabbage, lettuce, cheese and fries.",
                     Price = 80.00m,
                     Category = "Shawarma Wraps",
@@ -59,17 +59,6 @@ namespace NooshApp.Data
                     IsPopular = true,
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.Medium
-                },
-                new MenuItem
-                {
-                    Name = "Chip Wrap",
-                    Description = "Crispy fries, onions, tomatoes, pickles, fried brinjal, cabbage, lettuce and cheese, wrapped fresh.",
-                    Price = 55.00m,
-                    Category = "Shawarma Wraps",
-                    ImageUrl = "/images/menu/chip-wrap.jpg",
-                    IsPopular = false,
-                    IsVegetarian = true,
-                    SpiceLevel = SpiceLevel.None
                 },
 
                 // ---------- Shawarma Bowls ----------
