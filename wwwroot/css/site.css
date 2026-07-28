@@ -1738,22 +1738,3 @@ h1, h2, h3, h4, h5, h6 {
     .store-hours-list {
         align-items: center;
     }
-
-    /* ============================================
-   MENU LEGEND — REFINED ALIGNMENT
-   ============================================ */
-.menu-legend-row {
-    justify-content: center;
-    gap: 1rem;
-}
-
-.menu-legend-row .spice-indicator {
-    width: 76px;
-    flex-shrink: 0;
-    text-align: left;
-}
-
-.menu-legend-label {
-    width: 90px;
-    text-align: left;
-}
