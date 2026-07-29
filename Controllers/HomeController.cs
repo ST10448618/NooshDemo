@@ -68,8 +68,8 @@ namespace NooshApp.Controllers
                     MapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.177084092737!2d31.012795600000008!3d-29.830309900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef707005debfad1%3A0xbda15fc83aa5af0c!2sNoosh%20Florida%20Road!5e0!3m2!1sen!2sza!4v1784145278083!5m2!1sen!2sza",
                     Latitude = -29.825767122943052,
                     Longitude = 31.012779506706707,
-                    UberEatsUrl = "https://www.ubereats.com/za/store/noosh-florida-road/REPLACE_ME",
-                    MrDUrl = "https://www.mrd.com/delivery/restaurant/noosh-florida-road/REPLACE_ME"
+                    UberEatsUrl = "https://www.ubereats.com/za/store/noosh-florida-square/U1samMrsX6G2XoWoBu_Qdg?ps=1",
+                    MrDUrl = "https://www.mrd.com/delivery/restaurant/noosh-florida-square-morningside/34184"
                 },
                 new StoreLocation
                 {
@@ -85,8 +85,8 @@ namespace NooshApp.Controllers
                     MapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.562523287646!2d30.938385900000004!3d-29.848047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef701fc29e700a7%3A0xb7a8225019ec66b2!2sNoosh%20Pavilion%20Shopping%20Centre!5e0!3m2!1sen!2sza!4v1784145140210!5m2!1sen!2sza",
                     Latitude = -29.847719845381857,
                     Longitude = 30.936925320984226,
-                    UberEatsUrl = "https://www.ubereats.com/za/store/noosh-pavilion/REPLACE_ME",
-                    MrDUrl = "https://www.mrd.com/delivery/restaurant/noosh-pavilion/REPLACE_ME"
+                    UberEatsUrl = "https://www.ubereats.com/za/store/noosh-pavilion/YeTMLqRFVOmWMTp8nL2Fyw?ps=1",
+                    MrDUrl = "https://www.mrd.com/delivery/restaurant/noosh-pavillion-dawncliffe/34235"
                 }
             };
         }
