@@ -21,7 +21,11 @@ namespace NooshApp.ViewModels
         public string WhatsAppNumber { get; set; } = string.Empty;
         public List<StoreHoursLine> HoursSchedule { get; set; } = new();
         public string GoogleMapsUrl { get; set; } = string.Empty;
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
         public string MapEmbedUrl { get; set; } = string.Empty;
+        public string UberEatsUrl { get; set; } = string.Empty;
+        public string MrDUrl { get; set; } = string.Empty;
         public string DirectionsUrl =>
             $"https://www.google.com/maps/dir/?api=1&destination={Uri.EscapeDataString(Address)}";
     }

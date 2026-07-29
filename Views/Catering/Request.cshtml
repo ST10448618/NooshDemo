@@ -73,12 +73,9 @@
     <script>
         (function () {
             var form = document.querySelector('.auth-form');
-            var whatsAppNumber = '@ViewBag.WhatsAppNumber';
+            var cateringEmail = 'catering@noosheatery.co.za';
 
             form.addEventListener('submit', function () {
-                // Only open WhatsApp if the form is actually valid and about to submit —
-                // jQuery Unobtrusive Validation blocks the native submit event on invalid
-                // forms, so this only runs when the form is genuinely going through.
                 if (!form.checkValidity || form.checkValidity()) {
                     var fullName = document.getElementById('FullName').value;
                     var eventDate = document.getElementById('EventDate').value;
@@ -86,23 +83,24 @@
                     var eventLocation = document.getElementById('EventLocation').value;
                     var notes = document.getElementById('AdditionalNotes').value;
 
-                    var message = 'Hi Noosh! I\'m submitting a catering request.\n\n' +
+                    var subject = 'Catering Request - ' + fullName;
+                    var body = 'Hi Noosh,\n\nI would like to request catering.\n\n' +
                         'Name: ' + fullName + '\n' +
                         'Event Date: ' + eventDate + '\n' +
                         'Guests: ' + guestCount + '\n' +
                         'Location: ' + eventLocation + '\n';
 
                     if (notes) {
-                        message += 'Notes: ' + notes + '\n';
+                        body += 'Notes: ' + notes + '\n';
                     }
 
-                    message += '\nLooking forward to hearing from you!';
+                    body += '\nLooking forward to hearing from you!';
 
-                    var whatsAppUrl = 'https://wa.me/' + whatsAppNumber + '?text=' + encodeURIComponent(message);
+                    var mailtoUrl = 'mailto:' + cateringEmail +
+                        '?subject=' + encodeURIComponent(subject) +
+                        '&body=' + encodeURIComponent(body);
 
-                    // Triggered directly inside a click/submit event — this is a genuine
-                    // user gesture, so browsers allow it without popup blocking.
-                    window.open(whatsAppUrl, '_blank', 'noopener');
+                    window.location.href = mailtoUrl;
                 }
             });
         })();

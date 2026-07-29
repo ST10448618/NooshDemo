@@ -146,16 +146,38 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-primary);
 }
 
-.hero-image-wrap {
+.hero {
     position: relative;
-    min-height: 320px;
+    overflow: hidden;
+}
+
+.hero-image-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
 }
 
 .hero-image-wrap img {
     width: 100%;
-    height: auto;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-card);
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Below the point columns stack, drop back to normal in-flow behavior */
+@media (max-width: 991.98px) {
+    .hero-image-wrap {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .hero-image-wrap img {
+        height: auto;
+    }
 }
 
 /* ============================================

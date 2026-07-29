@@ -233,4 +233,5 @@ C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\UglyToad.PdfPig
 C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\UglyToad.PdfPig.dll
 C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\bin\Debug\net9.0\System.IO.Packaging.dll
 C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\pf5u7w05yq-2x8v2oo6ze.gz
-C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\23o29vlkws-5yzi7e0ppo.gz
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\d63fqy90tv-hktgop583c.gz
+C:\Users\perez\VSCodeProjects\NooshApp\NooshApp\obj\Debug\net9.0\compressed\23o29vlkws-dpwpxbxk78.gz
