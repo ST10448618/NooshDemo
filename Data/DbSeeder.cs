@@ -33,7 +33,7 @@ namespace NooshApp.Data
                     Description = "Grilled chicken, onions, tomatoes, pickles, fried brinjal, cabbage, lettuce, cheese and fries.",
                     Price = 80.00m,
                     Category = "Shawarma Wraps",
-                    ImageUrl = "/images/menu/chicken-wrap.jpg",
+                    ImageUrl = "/images/menu/chicken-wrap.webp",
                     IsPopular = true,
                     IsVegetarian = false,
                     SpiceLevel = SpiceLevel.Mild
@@ -44,7 +44,7 @@ namespace NooshApp.Data
                     Description = "Slow-cooked beef, onions, tomatoes, pickles, fried brinjal, cabbage, lettuce, cheese and fries.",
                     Price = 90.00m,
                     Category = "Shawarma Wraps",
-                    ImageUrl = "/images/menu/beef-wrap.jpg",
+                    ImageUrl = "/images/menu/beef-wrap.webp",
                     IsPopular = true,
                     IsVegetarian = false,
                     SpiceLevel = SpiceLevel.Mild
@@ -55,7 +55,7 @@ namespace NooshApp.Data
                     Description = "Crispy falafel, onions, tomatoes, pickles, fried brinjal, cabbage, lettuce, cheese and fries.",
                     Price = 80.00m,
                     Category = "Shawarma Wraps",
-                    ImageUrl = "/images/menu/falafel-wrap.jpg",
+                    ImageUrl = "/images/menu/falafel-wrap.webp",
                     IsPopular = true,
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.Medium
@@ -68,7 +68,7 @@ namespace NooshApp.Data
                     Description = "Grilled chicken on your choice of rice, fries, or half & half, loaded with all the fixings.",
                     Price = 110.00m,
                     Category = "Shawarma Bowls",
-                    ImageUrl = "/images/menu/chicken-bowl.jpg",
+                    ImageUrl = "/images/menu/chicken-bowl.webp",
                     IsPopular = true,
                     IsVegetarian = false,
                     SpiceLevel = SpiceLevel.Mild
@@ -79,7 +79,7 @@ namespace NooshApp.Data
                     Description = "Slow-cooked beef on your choice of rice, fries, or half & half, loaded with all the fixings.",
                     Price = 120.00m,
                     Category = "Shawarma Bowls",
-                    ImageUrl = "/images/menu/beef-bowl.jpg",
+                    ImageUrl = "/images/menu/beef-bowl.webp",
                     IsPopular = false,
                     IsVegetarian = false,
                     SpiceLevel = SpiceLevel.Mild
@@ -90,7 +90,7 @@ namespace NooshApp.Data
                     Description = "Crispy falafel on your choice of rice, fries, or half & half, loaded with all the fixings.",
                     Price = 110.00m,
                     Category = "Shawarma Bowls",
-                    ImageUrl = "/images/menu/falafel-bowl.jpg",
+                    ImageUrl = "/images/menu/falafel-bowl.webp",
                     IsPopular = false,
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.Medium
@@ -103,7 +103,7 @@ namespace NooshApp.Data
                     Description = "Loaded fries topped with melted cheese, guacamole, sour cream and crushed nachos.",
                     Price = 60.00m,
                     Category = "Loaded Cheesy Fries",
-                    ImageUrl = "/images/menu/chilli-cheese-fries.jpg",
+                    ImageUrl = "/images/menu/chilli-cheese-fries.webp",
                     IsPopular = true,
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.Medium
@@ -114,7 +114,7 @@ namespace NooshApp.Data
                     Description = "Loaded fries topped with grilled chicken, melted cheese, guacamole, sour cream and crushed nachos.",
                     Price = 80.00m,
                     Category = "Loaded Cheesy Fries",
-                    ImageUrl = "/images/menu/chilli-cheese-fries-chicken.jpg",
+                    ImageUrl = "/images/menu/chilli-cheese-fries-chicken.webp",
                     IsPopular = false,
                     IsVegetarian = false,
                     SpiceLevel = SpiceLevel.Medium
@@ -125,7 +125,7 @@ namespace NooshApp.Data
                     Description = "Loaded fries topped with slow-cooked beef, melted cheese, guacamole, sour cream and crushed nachos.",
                     Price = 100.00m,
                     Category = "Loaded Cheesy Fries",
-                    ImageUrl = "/images/menu/chilli-cheese-fries-beef.jpg",
+                    ImageUrl = "/images/menu/chilli-cheese-fries-beef.webp",
                     IsPopular = false,
                     IsVegetarian = false,
                     SpiceLevel = SpiceLevel.Medium
@@ -138,7 +138,7 @@ namespace NooshApp.Data
                     Description = "Crispy golden fries.",
                     Price = 25.00m,
                     Category = "Fries",
-                    ImageUrl = "/images/menu/fries-medium.jpg",
+                    ImageUrl = "/images/menu/fries-medium.webp",
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.None
                 },
@@ -148,7 +148,7 @@ namespace NooshApp.Data
                     Description = "Crispy fries drizzled with garlic sauce and peri peri.",
                     Price = 30.00m,
                     Category = "Fries",
-                    ImageUrl = "/images/menu/fries-medium-saucy.jpg",
+                    ImageUrl = "/images/menu/fries-medium-saucy.webp",
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.Mild
                 },
@@ -158,7 +158,7 @@ namespace NooshApp.Data
                     Description = "Crispy golden fries.",
                     Price = 45.00m,
                     Category = "Fries",
-                    ImageUrl = "/images/menu/fries-large.jpg",
+                    ImageUrl = "/images/menu/fries-large.webp",
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.None
                 },
@@ -168,7 +168,7 @@ namespace NooshApp.Data
                     Description = "Crispy fries drizzled with garlic sauce and peri peri.",
                     Price = 55.00m,
                     Category = "Fries",
-                    ImageUrl = "/images/menu/fries-large-saucy.jpg",
+                    ImageUrl = "/images/menu/fries-large-saucy.webp",
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.Mild
                 },
@@ -180,7 +180,7 @@ namespace NooshApp.Data
                     Description = "Our signature house-made chilli paste.",
                     Price = 10.00m,
                     Category = "Sauce Tubs",
-                    ImageUrl = "/images/menu/sauce-chilli-paste.jpg",
+                    ImageUrl = "/images/menu/sauce-chilli-paste.webp",
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.ExtraHot
                 },
@@ -190,7 +190,7 @@ namespace NooshApp.Data
                     Description = "Creamy house garlic sauce.",
                     Price = 10.00m,
                     Category = "Sauce Tubs",
-                    ImageUrl = "/images/menu/sauce-garlic.jpg",
+                    ImageUrl = "/images/menu/sauce-garlic.webp",
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.None
                 },
@@ -200,7 +200,7 @@ namespace NooshApp.Data
                     Description = "Fiery house peri peri sauce.",
                     Price = 10.00m,
                     Category = "Sauce Tubs",
-                    ImageUrl = "/images/menu/sauce-peri-peri.jpg",
+                    ImageUrl = "/images/menu/sauce-peri-peri.webp",
                     IsVegetarian = true,
                     SpiceLevel = SpiceLevel.Hot
                 },
@@ -212,7 +212,7 @@ namespace NooshApp.Data
                     Description = "2 x Chicken Nooshie Wraps, crispy fries, a sauce tub, juice and a fun activity.",
                     Price = 75.00m,
                     Category = "Kids Meal",
-                    ImageUrl = "/images/menu/kids-meal.jpg",
+                    ImageUrl = "/images/menu/kids-meal.webp",
                     IsPopular = true,
                     IsVegetarian = false,
                     SpiceLevel = SpiceLevel.None
