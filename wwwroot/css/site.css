@@ -1557,7 +1557,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-image-wrap {
-        margin-top: 2rem;
+        display: none !important;
+    }
+
+    .hero {
+        padding-bottom: 3rem;
     }
 
     /* ---- Generic section headers used across every page ---- */
