@@ -8,15 +8,48 @@ namespace NooshApp.Controllers
     {
         private readonly ICareersService _careersService;
 
+        private static readonly string[] RestaurantPositions = new[]
+        {
+            "Cashier", "Kitchen Staff", "Shift Supervisor", "Store Manager", "Delivery Driver"
+        };
+
+        private static readonly string[] HeadOfficePositions = new[]
+        {
+            "Marketing Coordinator", "Finance Assistant", "Operations Support"
+        };
+
+        private static readonly string[] Locations = new[]
+        {
+            "Noosh Saxony Westwood Mall", "Noosh Florida Road", "Noosh Pavilion"
+        };
+
         public CareersController(ICareersService careersService)
         {
             _careersService = careersService;
         }
 
         [HttpGet]
-        public IActionResult Apply()
+        public IActionResult Index()
         {
-            return View(new CareerApplicationViewModel());
+            ViewBag.RestaurantPositions = RestaurantPositions;
+            ViewBag.HeadOfficePositions = HeadOfficePositions;
+            ViewBag.Locations = Locations;
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Apply(string? position, string? location)
+        {
+            var model = new CareerApplicationViewModel();
+
+            if (!string.IsNullOrWhiteSpace(position))
+            {
+                model.DesiredPosition = !string.IsNullOrWhiteSpace(location) && location != "Head Office"
+                    ? $"{position} — {location}"
+                    : position;
+            }
+
+            return View(model);
         }
 
         [HttpPost]
@@ -45,7 +78,6 @@ namespace NooshApp.Controllers
             }
 
             var application = await _careersService.SubmitApplicationAsync(model, model.CvFile);
-
             return RedirectToAction("Confirmation", new { id = application.Id });
         }
 

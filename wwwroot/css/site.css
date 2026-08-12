@@ -1764,3 +1764,106 @@ h1, h2, h3, h4, h5, h6 {
     .store-hours-list {
         align-items: center;
     }
+
+    /* ============================================
+   CAREERS SEARCH LANDING PAGE
+   ============================================ */
+.careers-search-hero {
+    background-color: var(--color-ink);
+    background-image: linear-gradient(135deg, var(--color-ink) 0%, #2a2a2a 100%);
+    padding: 5rem 1.5rem 8rem;
+    text-align: center;
+}
+
+.careers-search-hero-inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.careers-search-eyebrow {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.careers-search-title {
+    color: var(--color-white);
+    font-size: clamp(2.25rem, 6vw, 3.25rem);
+    line-height: 1.15;
+}
+
+.careers-search-card-section {
+    margin-top: -5rem;
+    padding-bottom: 3rem;
+}
+
+.careers-search-card {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+}
+
+.careers-search-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-gray-mid);
+    margin-bottom: 0.6rem;
+}
+
+.careers-area-toggle {
+    display: flex;
+    background-color: var(--color-gray-light);
+    border-radius: 999px;
+    padding: 0.3rem;
+}
+
+.careers-area-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--color-gray-mid);
+    transition: all 0.15s ease;
+}
+
+.careers-area-btn.active {
+    background-color: var(--color-ink);
+    color: var(--color-primary);
+}
+
+.careers-search-select {
+    padding: 0.75rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+}
+
+.careers-search-select:focus {
+    border-color: var(--color-ink);
+    box-shadow: none;
+}
+
+/* ============================================
+   RESPONSIVE — CAREERS SEARCH
+   ============================================ */
+@media (max-width: 575.98px) {
+    .careers-search-hero {
+        padding: 3.5rem 1rem 6rem;
+    }
+
+    .careers-search-card {
+        padding: 1.5rem;
+    }
+}
